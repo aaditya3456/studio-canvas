@@ -45,22 +45,20 @@ Prerequisites: Node.js 20+ and a local MongoDB instance or MongoDB Atlas URI.
    npm install
    ```
 
-2. In a second terminal, install the API dependencies and configure it:
+2. In a second terminal, install the API dependencies and configure it. On Windows PowerShell, copy the example file with `Copy-Item server\.env.example server\.env` (or copy `server/.env.example` to `server/.env` in File Explorer):
 
    ```bash
    cd server
    npm install
-   copy .env.example .env
    ```
 
    Set `MONGODB_URI` in `server/.env`. For local MongoDB, the provided default is suitable.
 
-3. In a third terminal, install the web dependencies and configure it:
+3. In a third terminal, install the web dependencies and configure it. On Windows PowerShell, copy the example file with `Copy-Item client\.env.example client\.env.local` (or copy `client/.env.example` to `client/.env.local` in File Explorer):
 
    ```bash
    cd client
    npm install
-   copy .env.example .env.local
    ```
 
 4. Start both applications from the root (or use their individual `npm run dev` commands):
@@ -80,7 +78,7 @@ Prerequisites: Node.js 20+ and a local MongoDB instance or MongoDB Atlas URI.
 | `CLIENT_URL` | `server/.env` | Allowed CORS origin; comma-separated origins supported |
 | `NEXT_PUBLIC_API_URL` | `client/.env.local` | Browser API base URL, including `/api` |
 
-No secrets are committed. See the root [`.env.example`](.env.example).
+No secrets are committed. The example environment files are [`server/.env.example`](server/.env.example) and [`client/.env.example`](client/.env.example).
 
 ## REST API
 
@@ -126,10 +124,6 @@ Run the production client build from the root with `npm run build`. The backend 
 ## Known limitations and future work
 
 The editor intentionally supports a single 900×600 artboard, no authentication, no collaboration, and no image assets. Useful next steps are text-overlay editing, configurable artboard dimensions, layers/reordering, per-user access controls, automated API integration tests with an ephemeral MongoDB instance, and deployment using MongoDB Atlas plus a managed Node host.
-
-## Screenshots
-
-Screenshot placeholder — run the application locally to capture the current editor interface.
 
 ## Deployment
 
