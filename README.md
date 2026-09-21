@@ -1,3 +1,7 @@
+## Live Demo
+
+[Studio Canvas](https://studio-canvas-nine.vercel.app/)
+
 # Studio Canvas
 
 A polished mini design editor built as a full-stack take-home assignment. It provides a browser-based React Konva editor backed by a validated Express and MongoDB REST API.
